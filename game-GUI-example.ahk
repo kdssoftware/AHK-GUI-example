@@ -4,7 +4,7 @@ SendMode Input
 
 Menu, MyMenuBar, Add, &Back, mainGui
 Menu, MyMenuBar, Add, &How to use, how
-Gui main:Add, Text, x50 w160 , Thrones of Legends bot
+Gui main:Add, Text, x50 w160 , game
 Gui main:Add, Button, w150 x35 gRankedBattles, Ranked Battles
 Gui main:Add, Button, w150 gCampaignBattles, Campaign Battles
 Gui main:Add, Button, w150 gCardPacks, Open/buy card Packs
@@ -48,7 +48,7 @@ Gui CP: Add, CheckBox, vMeltRares, Melt rares
 ;;;Test
 Gui test:Menu, MyMenuBar
 Gui test:Add, Text,, testing
-Gui test:Add, Button, w150 gsetSizeOfToL, set size of ToL
+Gui test:Add, Button, w150 gsetSizeOfToL, set size of game
 Gui test:Add, Text,, %A_ScreenWidth% by %A_ScreenHeight%
 Gui test:Add, Text,, % Format("Pause : {1}", PauseKey)
 
@@ -65,7 +65,7 @@ setSizeOfToL:
     Pause, On
 
     WinGetTitle, Title
-    if(Title = Throne Of Legends - Strategy Sex Game | Nutaku - Mozilla Firefox){
+    if(Title = Game - Strategy Game | Mozilla Firefox){
         PixelSearch, ToLX, ToLY, 0, 0, %A_ScreenWidth%, %A_ScreenHeight%, 0x472816
         return
     }
